@@ -12,6 +12,21 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <nav>
+      <div class="app-name">Shopping List:</div>
+      <form id="add-list" class="add-list">
+        <fieldset>
+          <legend> Add a List </legend>
+          <input type="text" name="list[name]" placeholder="Example list name">
+          <input type="number" name="list[budget]" placeholder="68">
+          <input type="number" name="list[user_id]" placeholder="1">
+        <button type="submit" id="CreateList" class="btn btn-secondary">Add List!</button>
+      </fieldset>
+      </form>
+      </nav>
+  <main>
+      <div id="content" class="content"></div>
+    </main>
+
     </body>
 </html>

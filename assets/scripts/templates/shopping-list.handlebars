@@ -1,0 +1,19 @@
+{{#each lists as |list|}}
+  {{log list}}
+  <section data-id="{{list.id}}">
+    <h6>Name:</h6>
+    <h3>
+      {{limit list.name 15}}
+    </h3>
+    <h6>Budget:</h6>
+    <p>
+      {{#if list.budget}}
+        {{list.budget}}
+      {{else}}
+        No budget provided.
+      {{/if}}
+    </p>
+    <button type="button" input="submit" class="btn btn-danger" data-id="{{book.id}}">Delete </button>
+  </section>
+
+{{/each}}
