@@ -9,7 +9,7 @@ const onAddList = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.createList(data)
-    .then(function () {
+    .then(function() {
       onGetList(event)
     })
     .catch(ui.failure)
@@ -33,11 +33,20 @@ const onDeleteList = (event) => {
     .catch(ui.failure)
 }
 
+const onGetEditList = (event) => {
+  const id = $(event.target).data('id')
+  console.log(id)
+  api.getEditList(id)
+    .then(ui.getEditList)
+    .catch(ui.failure)
+}
+
 const addHandlers = () => {
   console.log('in handler')
   $('#add-list').on('submit', onAddList)
   $('#get-list').on('click', onGetList)
-  $('.content').on('click', '.delete-book', onDeleteList)
+  $('.content').on('click', '.delete-list', onDeleteList)
+  $('.content').on('click', '.edit-list', onGetEditList)
   //  $('#clearBooksButton').on('click', onClearBooks)
   //  $('.content').on('click', 'section button', onDeleteBook)
 }

@@ -29,8 +29,15 @@ const deleteList = function (id) {
     method: 'delete'
   })
 }
+
+const getEditList = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/lists/' + id
+  })
+}
 module.exports = {
   createList,
   getLists,
-  deleteList
+  deleteList,
+  getEditList
 }
