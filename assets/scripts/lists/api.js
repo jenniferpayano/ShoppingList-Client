@@ -5,7 +5,6 @@ const config = require('../config')
 const createList = function (data) {
   console.log('in API')
   console.log(data)
-  event.preventDefault()
   return $.ajax({
     url: config.apiUrl + '/lists',
     method: 'POST',
@@ -35,9 +34,19 @@ const getEditList = function (id) {
     url: config.apiUrl + '/lists/' + id
   })
 }
+const updateList = function (data) {
+  console.log('ID IS: ' + data.list.id)
+  return $.ajax({
+    url: config.apiUrl + '/lists/' + data.list.id,
+    method: 'PATCH',
+    data
+    // data: data
+  })
+}
 module.exports = {
   createList,
   getLists,
   deleteList,
-  getEditList
+  getEditList,
+  updateList
 }

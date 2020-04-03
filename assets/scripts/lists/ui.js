@@ -15,7 +15,7 @@ const getListSuccess = (data) => {
 
 const getEditList = (data) => {
   console.log(data.list)
-  document.getElementById('editList').style.display = 'block'
+  document.getElementById('update-list').style.display = 'block'
   const nameField = document.getElementById('editname')
   const idField = document.getElementById('editid')
   const budgetField = document.getElementById('editbudget')
