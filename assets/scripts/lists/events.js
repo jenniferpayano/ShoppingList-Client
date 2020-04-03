@@ -51,6 +51,11 @@ const onUpdateList = (event) => {
     })
     .catch(ui.failure)
 }
+const onCloseList = (event) => {
+  event.preventDefault()
+  console.log('in event')
+  ui.closeForm()
+}
 const addHandlers = () => {
   console.log('in handler')
   $('#add-list').on('submit', onAddList)
@@ -58,6 +63,7 @@ const addHandlers = () => {
   $('.content').on('click', '.delete-list', onDeleteList)
   $('.content').on('click', '.edit-list', onGetEditList)
   $('#update-list').on('submit', onUpdateList)
+  $('#update-list').on('click', '.close-list', onCloseList)
   //  $('#clearBooksButton').on('click', onClearBooks)
   //  $('.content').on('click', 'section button', onDeleteBook)
 }

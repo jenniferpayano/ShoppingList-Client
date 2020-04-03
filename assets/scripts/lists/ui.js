@@ -24,15 +24,15 @@ const getEditList = (data) => {
   idField.value = data.list.id
   budgetField.value = data.list.budget
   userIDField.value = data.list.user.id
-  // textField.value(data.list.name)
-  // const popupForm = showlistTemplate({
-  //   lists: data.list
-  // })
-  // $('editList').html(popupForm)
+}
+
+const closeForm = () => {
+  document.getElementById('update-list').style.display = 'none'
 }
 
 module.exports = {
   failure,
   getListSuccess,
-  getEditList
+  getEditList,
+  closeForm
 }
