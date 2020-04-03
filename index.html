@@ -27,16 +27,15 @@
       <div  class="editpopup" >
       <form id="update-list" style="display:none;">
       <h1>Edit List </h1>
-      <input type="number" id="editid"  name="list[id]" required>
+      <input type="hidden" id="editid"  name="list[id]" required>
       <label for="Name"><b>Name</b></label>
      <input type="text" name="list[name]" id="editname" required>
 
      <label for="budget"><b>Budget</b></label>
      <input type="number" id= "editbudget" name="list[budget]" required>
-     <input type="number" id= "edituserid" name="list[user_id]" required>
+     <input type="hidden" id= "edituserid" name="list[user_id]" required>
      <button type="submit" class="btn btn-success update-list">Save</button>
      <button type="button" class="btn btn-danger close-list" >Close</button>
-
       </form>
 
       </div>
