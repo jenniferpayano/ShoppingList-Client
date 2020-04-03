@@ -12,6 +12,7 @@ const getListSuccess = (data) => {
   })
   $('.content').html(createList)
 }
+
 module.exports = {
   failure,
   getListSuccess
