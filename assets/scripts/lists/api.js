@@ -36,6 +36,7 @@ const getEditList = function (id) {
 }
 const updateList = function (data) {
   console.log('ID IS: ' + data.list.id)
+    console.log('NAME IS: ' + data.list.name)
   return $.ajax({
     url: config.apiUrl + '/lists/' + data.list.id,
     method: 'PATCH',
