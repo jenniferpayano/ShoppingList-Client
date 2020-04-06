@@ -11,6 +11,8 @@ const getListSuccess = (data) => {
     lists: data.lists
   })
   $('.content').html(createList)
+  document.getElementById('add-list').reset()
+  document.getElementById('update-list').reset()
 }
 
 const getEditList = (data) => {
