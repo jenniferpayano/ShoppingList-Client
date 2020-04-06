@@ -1,14 +1,16 @@
 'use strict'
 const showlistTemplate = require('../templates/shopping-list.handlebars')
+const store = require('../store')
 
 const failure = (error) => {
   console.log(error)
 }
 const getListSuccess = (data) => {
   console.log('in ui')
-  console.log(data)
+  console.log(data.lists)
+  console.log(store.user.id)
   const createList = showlistTemplate({
-    lists: data.lists
+    lists: data.lists.filter(x => x.user.id === store.user.id)
   })
   $('.content').html(createList)
   document.getElementById('add-list').reset()
