@@ -9,5 +9,8 @@ const authEvents = require('./auth/events.js')
 
 $(() => {
   listEvents.addHandlers()
-  authEvents.addHandlers()
+  $('.sign-in-toggle').on('click', authEvents.onSignInToggle)
+  $('.sign-up-toggle').on('click', authEvents.onSignUpToggle)
+  $('#sign-up').on('submit', authEvents.onSignUp)
+  $('#sign-in').on('submit', authEvents.onSignIn)
 })

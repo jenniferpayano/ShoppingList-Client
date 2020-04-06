@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Shopping List</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel = "icon" href ="https://storage.needpix.com/rsynced_images/shopping-list-2044706_1280.jpg"
+            type = "image/x-icon">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -21,51 +22,43 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-9 col-lg-8 mx-auto">
-
-                    <form class="sign-up">
+                    <form id="sign-up">
                         <h3 class="login-heading mb-4">Sign Up!</h3>
                       <div class="form-label-group">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                        <input type="email" id="inputEmail" name="credentials[email]" class="form-control" placeholder="Email address" required autofocus>
                         <label for="inputEmail">Email address</label>
                       </div>
                       <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <input type="password" id="inputPassword" name="credentials[password]" class="form-control" placeholder="Password" required>
                         <label for="inputPassword">Password</label>
                       </div>
                       <div class="form-label-group">
-                        <input type="password" id="inputConfirmationPassword" class="form-control" placeholder="Confirm Password" required>
+                        <input type="password" id="inputConfirmationPassword" name="credentials[password_confirmation]" class="form-control" placeholder="Confirm Password" required>
                         <label for="inputConfirmationPassword">Confirm Password</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
                       </div>
                       <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign up</button>
                       <div class="text-center">
-                         <button type="button" class="btn btn-secondary sign-in" >Sign In</button>
+                         <button type="button" class="btn btn-secondary sign-in-toggle" >Sign In</button>
                       </div>
                     </form>
 
-                    <form class="sign-in" style="display:none;">
-                        <h3 class="login-heading mb-4">Welcome back!</h3>
+                    <form id="sign-in" style="display:none;">
+                      <h3 class="login-heading mb-4" >Welcome back!</h3>
                       <div class="form-label-group">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                        <label for="inputEmail">Email address</label>
+                        <input type="email" id="InputEmail2" name="credentials[email]" class="form-control" placeholder="Email address" required autofocus>
+                        <label for="InputEmail2">Email address</label>
                       </div>
 
                       <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <label for="inputPassword">Password</label>
-                      </div>
-
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
+                        <input type="password" id="InputPassword2"name="credentials[password]" class="form-control" placeholder="Password" required>
+                        <label for="InputPassword2">Password</label>
                       </div>
                       <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
                       <div class="text-center">
-                        <a class="small" href="#">Back to sign up</a></div>
+                        <button type="button" class="btn btn-secondary sign-up-toggle" >Sign up</button>
+                      </div>
                     </form>
+                    <p id="message"></p>
                   </div>
                 </div>
               </div>
