@@ -1,17 +1,108 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Shopping List</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel = "icon" href ="https://storage.needpix.com/rsynced_images/shopping-list-2044706_1280.jpg"
+            type = "image/x-icon">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+    <div class="user-auth">
+      <div class="container-fluid">
+        <div class="row no-gutter">
+          <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+          <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-9 col-lg-8 mx-auto">
+                    <form id="sign-up">
+                        <h3 class="login-heading mb-4">Sign Up!</h3>
+                      <div class="form-label-group">
+                        <input type="email" id="inputEmail" name="credentials[email]" class="form-control" placeholder="Email address" required autofocus>
+                        <label for="inputEmail">Email address</label>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="password" id="inputPassword" name="credentials[password]" class="form-control" placeholder="Password" required>
+                        <label for="inputPassword">Password</label>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="password" id="inputConfirmationPassword" name="credentials[password_confirmation]" class="form-control" placeholder="Confirm Password" required>
+                        <label for="inputConfirmationPassword">Confirm Password</label>
+                      </div>
+                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign up</button>
+                      <div class="text-center">
+                         <button type="button" class="btn btn-secondary sign-in-toggle" >Sign In</button>
+                      </div>
+                    </form>
+
+                    <form id="sign-in" style="display:none;">
+                      <h3 class="login-heading mb-4" >Welcome back!</h3>
+                      <div class="form-label-group">
+                        <input type="email" id="InputEmail2" name="credentials[email]" class="form-control" placeholder="Email address" required autofocus>
+                        <label for="InputEmail2">Email address</label>
+                      </div>
+
+                      <div class="form-label-group">
+                        <input type="password" id="InputPassword2"name="credentials[password]" class="form-control" placeholder="Password" required>
+                        <label for="InputPassword2">Password</label>
+                      </div>
+                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                      <div class="text-center">
+                        <button type="button" class="btn btn-secondary sign-up-toggle" >Sign up</button>
+                      </div>
+                    </form>
+                    <p id="message"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+      <div class="shopping-list" >
+      <nav>
+      <h1 class="app-name">Shopping List:</h1>
+      <form id="add-list" class="add-list">
+        <fieldset>
+          <legend> Add a List </legend>
+          <input type="text" name="list[name]" placeholder="Example list name">
+          <input type="number" name="list[budget]" placeholder="68">
+          <input type="number" name="list[user_id]" placeholder="1">
+        <button type="submit" id="CreateList" class="btn btn-secondary">Add List!</button>
+        <button type="button" id="get-list" class="btn btn-secondary get-list">Get List</button>
+      </fieldset>
+      </form>
+      <div  class="editpopup" >
+      <form id="update-list" style="display:none;">
+      <h1>Edit List </h1>
+      <input type="hidden" id="editid"  name="list[id]" required>
+      <label for="Name"><b>Name</b></label>
+     <input type="text" name="list[name]" id="editname" required>
+
+     <label for="budget"><b>Budget</b></label>
+     <input type="number" id= "editbudget" name="list[budget]" required>
+     <input type="hidden" id= "edituserid" name="list[user_id]" required>
+     <button type="submit" class="btn btn-success update-list">Save</button>
+     <button type="button" class="btn btn-danger close-list" >Close</button>
+      </form>
+
+      </div>
+      </nav>
+    </br>
+  <main>
+      <div id="content" class="content"></div>
+    </main>
+</div>
     </body>
 </html>
