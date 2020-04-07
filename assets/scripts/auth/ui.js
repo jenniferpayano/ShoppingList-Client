@@ -11,17 +11,34 @@ const successfulSignUp = () => {
 const successfulSignIn = (data) => {
   $('#message').removeClass()
   $('#message').text('Signed In Successfully')
+  document.getElementById('sign-in').reset()
   document.getElementById('user-auth').style.display = 'none'
   document.getElementById('shopping-list').style.display = 'block'
   store.user = data.user
 }
-const failure = (error) => {
-  console.log(error)
+const changePasswordSuccess = () => {
+  $('#passmessage').removeClass()
+  $('#passmessage').text('Password Changed Successfully')
+  document.getElementById('change-password').reset()
+}
+const signFailure = () => {
+  $('#message').removeClass()
+  $('#message').text('Error Signing In/Up')
+  document.getElementById('sign-in').reset()
+  document.getElementById('sign-up').reset()
+}
+
+const passFailure = () => {
+  $('#passmessage').removeClass()
+  $('#passmessage').text('Error Changing Password')
+  document.getElementById('change-password').reset()
 }
 
 module.exports = {
   successfulSignUp,
   successfulSignIn,
-  failure
+  changePasswordSuccess,
+  signFailure,
+  passFailure
 
 }

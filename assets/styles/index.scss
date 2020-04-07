@@ -1,6 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
 
-
 .image,
 .login {
   min-height: 100vh;
@@ -30,7 +29,7 @@
 
 .form-label-group > input,
 .form-label-group > label {
-  padding: .75rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   height: auto;
   border-radius: 2rem;
 }
@@ -79,4 +78,139 @@
 
 .form-label-group input:not(:placeholder-shown)~label {
   padding-top: calc(.75rem / 3);
-  padding-bottom:calc(.75rem / 3); font-size: 12px; color: #777; } /* BUTTONS MODIFICATION*/ .sign-in-toggle { border:none; color:black; background: none; text-transform: uppercase !important; font-weight: 600 !important; text-decoration-line: underline; } .sign-up-toggle { border:none; color:black; background: none; text-transform: uppercase !important; font-weight: 700 !important; text-decoration-line: underline; } /*-------*/ .shopping-list { display: none; } .user-auth{ display: block; } main { @include make-container; @include make-container-max-widths; section { @include make-col-ready; @include media-breakpoint-up(md) { @include make-col(6); } @include media-breakpoint-up(lg) { @include make-col(4); } background: $white; border: 1px solid; cursor: pointer; margin: -1px; outline: none; padding: 1rem; p { margin-bottom: 0; } } .content { @include make-row; &:empty { &::before { color: lighten($info, 25%); content: 'Get list'; font-size: 10vh; line-height: 0.85; text-align: center; width: 100%; } } } } /* Fallback for Edge -------------------------------------------------- */ @supports (-ms-ime-align: auto) { .form-label-group>label { display: none; } .form-label-group input::-ms-input-placeholder { color: #777; } } /* Fallback for IE -------------------------------------------------- */ @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { .form-label-group>label { display: none; } .form-label-group input:-ms-input-placeholder { color: #777; } }
+  padding-bottom: calc(.75rem / 3);
+  font-size: 12px;
+  color: #777;
+}
+/* BUTTONS MODIFICATION*/
+.sign-in-toggle {
+  border: none;
+  color: black;
+  background: none;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  text-decoration-line: underline;
+}
+
+.sign-up-toggle {
+  border: none;
+  color: black;
+  background: none;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  text-decoration-line: underline;
+}
+/*-------*/
+.shopping-list {
+  display: none;
+}
+
+.user-auth {
+  display: block;
+}
+/* ---NAVIGATION------ */
+@media (min-width: 992px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform:translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+/* ---CONTENT----- */
+
+main {
+  @include make-container;
+  @include make-container-max-widths;
+
+  section {
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+    background: $white;
+    border: 1px solid;
+    cursor: pointer;
+    margin: -1px;
+    outline: none;
+    padding: 1rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .content {
+    @include make-row;
+
+    &:empty {
+      &::before {
+        color: lighten($info, 25%);
+        content: 'Get list';
+        font-size: 10vh;
+        line-height: 0.85;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+/* Fallback for Edge -------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+  .form-label-group > label {
+    display: none;
+  }
+
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+/* Fallback for IE -------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
+    display: none;
+  }
+
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
