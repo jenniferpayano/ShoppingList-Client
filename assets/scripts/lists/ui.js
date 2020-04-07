@@ -6,9 +6,6 @@ const failure = (error) => {
   console.log(error)
 }
 const getListSuccess = (data) => {
-  console.log('in ui')
-  console.log(data.lists)
-  console.log(store.user.id)
   const createList = showlistTemplate({
     lists: data.lists.filter(x => x.user.id === store.user.id)
   })
@@ -18,7 +15,6 @@ const getListSuccess = (data) => {
 }
 
 const getEditList = (data) => {
-  console.log(data.list)
   document.getElementById('update-list').style.display = 'block'
   const nameField = document.getElementById('editname')
   const idField = document.getElementById('editid')
