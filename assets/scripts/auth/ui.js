@@ -34,11 +34,20 @@ const passFailure = () => {
   document.getElementById('change-password').reset()
 }
 
+const signOutSuccess = () => {
+  $('#message').text('Signed out Successfully')
+  $('#message').removeClass()
+  document.getElementById('user-auth').style.display = 'block'
+  document.getElementById('shopping-list').style.display = 'none'
+  document.getElementById('sign-up').style.display = 'block'
+  document.getElementById('sign-in').style.display = 'none'
+}
 module.exports = {
   successfulSignUp,
   successfulSignIn,
   changePasswordSuccess,
   signFailure,
-  passFailure
+  passFailure,
+  signOutSuccess
 
 }

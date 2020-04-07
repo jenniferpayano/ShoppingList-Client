@@ -15,10 +15,10 @@ const getListSuccess = (data) => {
   document.getElementById('add-list').display = 'block'
   document.getElementById('add-list').reset()
   document.getElementById('content').style.visibility = 'visible'
+  $('#successfulUpdate').text('Successful Update!')
 }
 
 const getEditList = (data) => {
-  console.log(data)
   const nameField = document.getElementById('editname')
   const idField = document.getElementById('editid')
   const budgetField = document.getElementById('editbudget')
@@ -44,10 +44,11 @@ const getEditList = (data) => {
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
-    if (event.target == modal) {
+    if (event.target === modal) {
       modal.style.display = 'none'
     }
   }
+  $('#successfulUpdate').text('')
 }
 
 const closeForm = () => {
