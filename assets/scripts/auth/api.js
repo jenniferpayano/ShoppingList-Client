@@ -24,6 +24,7 @@ const signIn = function (data) {
 }
 const changePassword = function (data) {
   event.preventDefault()
+  console.log(store.user)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
@@ -41,8 +42,7 @@ const signOut = function (data) {
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
     // data: data
   })
 }

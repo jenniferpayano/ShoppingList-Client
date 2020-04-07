@@ -13,4 +13,6 @@ $(() => {
   $('.sign-up-toggle').on('click', authEvents.onSignUpToggle)
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#sign-out').on('click', authEvents.onSignOut)
+  $('#change-password').on('submit', authEvents.onChangePassword)
 })

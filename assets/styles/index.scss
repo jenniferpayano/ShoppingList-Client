@@ -1,12 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
-
-:root {
-  --input-padding-x: 1.5rem;
-  --input-padding-y: 0.75rem;
-}
-
-.login,
-.image {
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+.image,
+.login {
   min-height: 100vh;
 }
 
@@ -32,14 +27,14 @@
   margin-bottom: 1rem;
 }
 
-.form-label-group>input,
-.form-label-group>label {
-  padding: var(--input-padding-y) var(--input-padding-x);
+.form-label-group > input,
+.form-label-group > label {
+  padding: 0.75rem 1.5rem;
   height: auto;
   border-radius: 2rem;
 }
 
-.form-label-group>label {
+.form-label-group > label {
   position: absolute;
   top: 0;
   left: 0;
@@ -52,8 +47,8 @@
   cursor: text;
   /* Match the input under the label */
   border: 1px solid transparent;
-  border-radius: .25rem;
-  transition: all .1s ease-in-out;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .form-label-group input::-webkit-input-placeholder {
@@ -77,20 +72,20 @@
 }
 
 .form-label-group input:not(:placeholder-shown) {
-  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
-  padding-bottom: calc(var(--input-padding-y) / 3);
+  padding-top: calc((.75rem) + (.75rem) * (2 / 3));
+  padding-bottom: calc((.75rem) / 3);
 }
 
 .form-label-group input:not(:placeholder-shown)~label {
-  padding-top: calc(var(--input-padding-y) / 3);
-  padding-bottom: calc(var(--input-padding-y) / 3);
+  padding-top: calc(.75rem / 3);
+  padding-bottom: calc(.75rem / 3);
   font-size: 12px;
   color: #777;
 }
 /* BUTTONS MODIFICATION*/
 .sign-in-toggle {
-  border:none;
-  color:black;
+  border: none;
+  color: black;
   background: none;
   text-transform: uppercase !important;
   font-weight: 600 !important;
@@ -98,98 +93,89 @@
 }
 
 .sign-up-toggle {
-  border:none;
-  color:black;
+  border: none;
+  color: black;
   background: none;
   text-transform: uppercase !important;
   font-weight: 700 !important;
   text-decoration-line: underline;
-
-}
-
-/* Fallback for Edge
--------------------------------------------------- */
-
-@supports (-ms-ime-align: auto) {
-  .form-label-group>label {
-    display: none;
-  }
-  .form-label-group input::-ms-input-placeholder {
-    color: #777;
-  }
-}
-
-/* Fallback for IE
--------------------------------------------------- */
-
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-  .form-label-group>label {
-    display: none;
-  }
-  .form-label-group input:-ms-input-placeholder {
-    color: #777;
-  }
-}
-
-
-/* Fallback for Edge
--------------------------------------------------- */
-
-@supports (-ms-ime-align: auto) {
-  .form-label-group>label {
-    display: none;
-  }
-  .form-label-group input::-ms-input-placeholder {
-    color: #777;
-  }
-}
-
-/* Fallback for IE
--------------------------------------------------- */
-
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-  .form-label-group>label {
-    display: none;
-  }
-  .form-label-group input:-ms-input-placeholder {
-    color: #777;
-  }
 }
 /*-------*/
 .shopping-list {
   display: none;
 }
-.user-auth{
+
+.user-auth {
   display: block;
 }
+/* ---NAVIGATION------ */
+@media (min-width: 992px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform:translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+/* ---CONTENT----- */
 main {
   @include make-container;
   @include make-container-max-widths;
 
-  section {
-    @include make-col-ready;
-    @include media-breakpoint-up(md) {
-      @include make-col(6);
-    }
-    @include media-breakpoint-up(lg) {
-      @include make-col(4);
-    }
-    background: $white;
-    border: 1px solid;
-    cursor: pointer;
-    margin: -1px;
-    outline: none;
-    padding: 1rem;
 
-    p {
-      margin-bottom: 0;
-    }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .container {
+    padding: 2px 16px;
   }
 
   .content {
     @include make-row;
+    padding: 3rem;
 
     &:empty {
       &::before {
@@ -199,7 +185,64 @@ main {
         line-height: 0.85;
         text-align: center;
         width: 100%;
+        background-image: none;
       }
     }
+  }
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+}
+/* Fallback for Edge -------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+  .form-label-group > label {
+    display: none;
+  }
+
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+/* Fallback for IE -------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
+    display: none;
+  }
+
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
   }
 }
