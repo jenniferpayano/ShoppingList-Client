@@ -13,7 +13,7 @@ const getListSuccess = (data) => {
   document.getElementById('add-list').display = 'block'
   document.getElementById('add-list').reset()
   document.getElementById('update-list').reset()
-  document.getElementById('content').style.position = 'relative'
+  document.getElementById('content').style.visibility = 'visible'
 }
 
 const getEditList = (data) => {

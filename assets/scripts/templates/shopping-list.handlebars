@@ -1,22 +1,12 @@
 {{#each lists as |list|}}
   {{log list}}
-  <section data-id="{{list.id}}">
-
-
-    <h6>Todo-List</h6>
-    <h3>
-      {{limit list.name 15}}
-    </h3>
-    <h6>Budget:</h6>
-    <p>
-      {{#if list.budget}}
-        {{list.budget}}
-      {{else}}
-        No budget provided.
-      {{/if}}
-    </p>
+  <div class="card" data-id="{{list.id}}">
+  <img src="http://media.bizj.us/view/img/1011891/galleria-exterior-food-court-rendering*750xx3944-2219-0-102.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>{{list.name}}</b></h4>
+    <p>Budget: ${{list.budget}}</p>
     <button type="button" input="submit" class="btn btn-primary edit-list" data-id="{{list.id}}">Edit </button>
     <button type="button" input="submit" class="btn btn-danger delete-list" data-id="{{list.id}}">Delete </button>
-  </section>
-
+  </div>
+</div>
 {{/each}}

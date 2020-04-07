@@ -1,5 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
-
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 .image,
 .login {
   min-height: 100vh;
@@ -157,27 +157,20 @@ main {
   @include make-container;
   @include make-container-max-widths;
 
-  section {
-    @include make-col-ready;
-    @include media-breakpoint-up(md) {
-      @include make-col(6);
-      padding: 3rem;
-    }
-    @include media-breakpoint-up(lg) {
-      @include make-col(4);
-    }
-    background-image: url('https://storage.needpix.com/rsynced_images/shopping-list-2044706_1280.jpg');
-    border: 1px solid;
-    cursor: pointer;
-    margin: -1px;
-    outline: none;
-    padding: 1rem;
-    color: $white;
 
 
-    p {
-      margin-bottom: 0;
-    }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .container {
+    padding: 2px 16px;
   }
 
   .content {
@@ -192,6 +185,7 @@ main {
         line-height: 0.85;
         text-align: center;
         width: 100%;
+        background-image: none;
       }
     }
   }
