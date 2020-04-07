@@ -10,12 +10,15 @@ const getListSuccess = (data) => {
     lists: data.lists.filter(x => x.user.id === store.user.id)
   })
   $('.content').html(createList)
+  document.getElementById('add-list').display = 'block'
   document.getElementById('add-list').reset()
   document.getElementById('update-list').reset()
+  document.getElementById('content').style.position = 'relative'
 }
 
 const getEditList = (data) => {
   document.getElementById('update-list').style.display = 'block'
+  document.getElementById('content').style.position = 'none'
   const nameField = document.getElementById('editname')
   const idField = document.getElementById('editid')
   const budgetField = document.getElementById('editbudget')
@@ -28,6 +31,7 @@ const getEditList = (data) => {
 
 const closeForm = () => {
   document.getElementById('update-list').style.display = 'none'
+  document.getElementById('content').style.position = 'relative'
 }
 
 module.exports = {

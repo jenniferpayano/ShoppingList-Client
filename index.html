@@ -67,23 +67,23 @@
         </div>
       </div>
     </div>
+</div>
 
-
-
-  </div>
-  <div id="shopping-list">
+<!-- NAVIGATION BAR -->
+  <div id="shopping-list"  style="display:none;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
+      <img src="https://i2.wp.com/www.reasonstoskipthehousework.com/wp-content/uploads/2014/06/shopcart.png?w=256&ssl=1" height="50" atl="ClipBoard Image">
         <a class="navbar-brand" href="#">Shopping Lists</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Change Password
               </a>
+
+
+
               <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
               <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
                 <form class="px-4 py-6" id="change-password">
@@ -101,23 +101,39 @@
                 <small id="passmessage" ></small>
 
               </div>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="AddList" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Add List
+            </a>
+
+              <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="AddList">
+                <form class="px-4 py-6" id="add-list">
+                  <div class="form-group">
+                    <label>List Name</label>
+                    <input type="text" name="list[name]" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label>Budget</label>
+                      <input type="number" name="list[budget]" placeholder="68">
+                  </div>
+                  <button type="submit" id="CreateList" class="btn btn-secondary">Add List!</button>
+                </form>
+              </div>
+                </li>
+                <li class="nav-item">
+                <button type="button" id="get-list" class="btn btn-secondary get-list">Get List</button>
+                </li>
+            </ul>
         </div>
-        </li>
-        </ul>
       </div>
+        </nav>
   </div>
-  </nav>
-  <!-- <nav>
-      <h1 class="app-name">Shopping List:</h1>
-      <form id="add-list" class="add-list">
-        <fieldset>
-          <legend> Add a List </legend>
-          <input type="text" name="list[name]" placeholder="Example list name">
-          <input type="number" name="list[budget]" placeholder="68">
-        <button type="submit" id="CreateList" class="btn btn-secondary">Add List!</button>
-        <button type="button" id="get-list" class="btn btn-secondary get-list">Get List</button>
-      </fieldset>
-      </form>
+
+
+
+<!-- Content of PAGE -->
+<div class="application" id ="application1" style="display:none;">
       <div  class="editpopup" >
       <form id="update-list" style="display:none;">
       <h1>Edit List </h1>
@@ -132,7 +148,7 @@
       </form>
 
       </div>
-      </nav> -->
+
   </br>
   <main>
     <div id="content" class="content"></div>

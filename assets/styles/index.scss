@@ -6,7 +6,7 @@
 }
 
 .bg-image {
-  background-image: url("https://storage.needpix.com/rsynced_images/shopping-list-2044706_1280.jpg");
+  background-image: url('https://storage.needpix.com/rsynced_images/shopping-list-2044706_1280.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -152,9 +152,7 @@
   -webkit-animation-name: slideIn;
   animation-name: slideIn;
 }
-
 /* ---CONTENT----- */
-
 main {
   @include make-container;
   @include make-container-max-widths;
@@ -163,16 +161,19 @@ main {
     @include make-col-ready;
     @include media-breakpoint-up(md) {
       @include make-col(6);
+      padding: 3rem;
     }
     @include media-breakpoint-up(lg) {
       @include make-col(4);
     }
-    background: $white;
+    background-image: url('https://storage.needpix.com/rsynced_images/shopping-list-2044706_1280.jpg');
     border: 1px solid;
     cursor: pointer;
     margin: -1px;
     outline: none;
     padding: 1rem;
+    color: $white;
+
 
     p {
       margin-bottom: 0;
@@ -181,6 +182,7 @@ main {
 
   .content {
     @include make-row;
+    padding: 3rem;
 
     &:empty {
       &::before {

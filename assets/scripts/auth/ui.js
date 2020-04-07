@@ -14,6 +14,7 @@ const successfulSignIn = (data) => {
   document.getElementById('sign-in').reset()
   document.getElementById('user-auth').style.display = 'none'
   document.getElementById('shopping-list').style.display = 'block'
+  document.getElementById('application1').style.display = 'block'
   store.user = data.user
 }
 const changePasswordSuccess = () => {
