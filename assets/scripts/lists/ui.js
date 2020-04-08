@@ -2,8 +2,6 @@
 const showlistTemplate = require('../templates/shopping-list.handlebars')
 const store = require('../store')
 
-
-
 const failure = (error) => {
   console.log(error)
 }
@@ -13,7 +11,7 @@ const getListSuccess = (data) => {
   })
   $('.content').html(createList)
   document.getElementById('add-list').display = 'block'
-  document.getElementById('add-list').reset()
+  $('#add-list')[0].reset()
   document.getElementById('content').style.visibility = 'visible'
   $('#successfulUpdate').text('Successful Update!')
 }
