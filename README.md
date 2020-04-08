@@ -7,44 +7,47 @@ Shopping List
 * Wireframe
 * Planning and Development
 * User Stories
-* Unsolved Problems
+* ERD
 * Technology
 * Creator
 
 Description
 ------------
-This is an Tic-Tac-Toe application written in HTML, CSS, JavaScript, and Jquery by me [Jennifer Payano].
+This is an Shopping list application written in Ruby, Rails, CSS, JavaScript, HTML, and JQuery by me [Jennifer Payano].
 
 
 WIREFRAME
 ---------
-[https://imgur.com/VLwnnh7]
-
+https://imgur.com/a/ZG9W33K
+https://imgur.com/a/b6XXinn
 
 PLANNING AND DEVELOPMENT
 ------------------------
-To plan this game, I knew that I would a 3 by 3 dashboard that would represent each block in the hash table. From there I would then built a simple game logic, that determines the play of the game. After the game logic was completed, I created a dashboard form that would store the game information associated with the the user.
-
+To plan this game, I knew that I would want to built an application that will help me keep track of grocery items.
+When going into a store I usually loose track of what I want to get when I go into a store. Often
+that shopping list includes many items at different stores. It would be nice to have a tracker
+for the store and what I need to get at that store specifically to keep in budget. I think a lot of busy people get distracted by other things when going to a store and go above their budget.
 
 USER STORIES
 ------------
-- As a player, I want to sign up to create an user.
-- As a player, I want to sign in using the username and password I created with the sign up form
-- As a player, once signed in I would want to click a button that would create a new game and associate it to my user.
-- As a player, I want to see whose turn is it to play, so I can chose my next play.
-- As a player, I want to place my input 'X' or 'O' on spot and see it be displayed.
-- As a player, I want to know wether I won, lost or there was a draw to start a new game.
-- As a player, I want to have a record of how many games I have played using my account.
+As a user I want to be able to log in
+As a user I want to create a grocery list and tell the it the budget
+As a user I want I want to create grocery items
+As a user I want to select a store and add items with price
+As a user I want it to subtract the item cost from the budget
+As a user I want to have my items be associated with the stores
+As a user I want to see the store and see the items that need to be bought at that store.
+As a user I want to see how much I am supposed to spend on the items of that store.
 
 
-UNSOLVED PROBLEMS
+ERD
 -----------------
-- hover over the button and have it change color before being played
-- sign up should already be selected when it loads, since its default it should be selected in the radio button first
+https://imgur.com/a/ZRPGoc6
 
 TECHNOLOGY
 ------------
-- HTML
+- Ruby
+- Rails
 - CSS
 - Javascript
 - jQuery
