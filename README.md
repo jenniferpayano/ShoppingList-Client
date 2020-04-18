@@ -2,13 +2,13 @@ Jennifer Payano Shopping-List Application
 
 Shopping List
 ----------------
-
 * Description
 * Wireframe
 * Planning and Development
 * User Stories
 * ERD
 * Technology
+* Unsolved Problems
 * Creator
 
 Description
@@ -43,7 +43,6 @@ As a user I want it to subtract the item cost from the budget
 As a user I want to have my items be associated with the stores
 As a user I want to see the store and see the items that need to be bought at that store.
 As a user I want to see how much I am supposed to spend on the items of that store.
-
 
 ERD
 -----------------
