@@ -13,7 +13,7 @@ Shopping List
 
 Description
 ------------
-This is the shopping list application user insterface written in CSS, JavaScript, HTML, and JQuery by me [Jennifer Payano].
+This is the shopping list application user interface written in CSS, JavaScript, HTML, and JQuery by me [Jennifer Payano].
 I wanted to create an application that could keep track of stores that I have attended and how much was spent. This will be substracted from the budget.
 
 The deployed user interface application url: https://jenniferpayano.github.io/shoppinglist-ui/
