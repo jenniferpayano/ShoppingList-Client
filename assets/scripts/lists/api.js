@@ -4,7 +4,7 @@ const store = require('../store')
 // const store = require('../store')
 
 const createList = function (data) {
-  console.log(store.user.token)
+  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/lists',
     headers: {

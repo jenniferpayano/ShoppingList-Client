@@ -13,7 +13,12 @@ Shopping List
 
 Description
 ------------
-This is an Shopping list application written in Ruby, Rails, CSS, JavaScript, HTML, and JQuery by me [Jennifer Payano].
+This is the shopping list application user insterface written in CSS, JavaScript, HTML, and JQuery by me [Jennifer Payano].
+I wanted to create an application that could keep track of stores that I have attended and how much was spent. This will be substracted from the budget.
+
+The deployed user interface application url: https://jenniferpayano.github.io/shoppinglist-ui/
+
+This site API is deployed to: https://shoppinglists-api.herokuapp.com/lists
 
 
 WIREFRAME
@@ -46,11 +51,14 @@ https://imgur.com/a/ZRPGoc6
 
 TECHNOLOGY
 ------------
-- Ruby
-- Rails
 - CSS
 - Javascript
 - jQuery
+
+UNSOLVED PROBLEMS
+-----------------
+- Add budget line and when list is added subtract from total budget
+- Possibly when clicked on the list add the items that were bought at that store
 
 CREATOR
 ---------
